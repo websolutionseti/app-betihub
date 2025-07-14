@@ -6,6 +6,23 @@ ao cliente, com foco em PMEs e organizações de impacto.
 
 ---
 
+![License](https://img.shields.io/github/license/websolutionseti/app-betihub)
+![GitHub Sponsors](https://img.shields.io/github/sponsors/websolutionseti)
+
+## 🤖 Sobre o projeto
+
+O App BetiHub é uma plataforma de automação inteligente com integração a IA, SDR virtual, Supabase, PostgreSQL e muito mais. Ideal para freelancers, MEIs e pequenas empresas.
+
+## 🚀 Instalação
+
+```bash
+git clone https://github.com/websolutionseti/app-betihub.git
+cd app-betihub
+npm install
+npm run dev
+
+<hr> 
+
 ## 🚀 Visão Geral
 
 - 🔁 Integração com APIs e canais de comunicação (WhatsApp, Webchat, etc.)
