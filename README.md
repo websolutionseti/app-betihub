@@ -15,7 +15,6 @@ O App BetiHub é uma plataforma de automação inteligente com integração a IA
 
 ## 🚀 Instalação
 
-```bash
 git clone https://github.com/websolutionseti/app-betihub.git
 cd app-betihub
 npm install
