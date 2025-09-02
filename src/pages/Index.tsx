@@ -5,19 +5,48 @@ import { DatabaseDiagrams } from "@/components/briefing/DatabaseDiagrams";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "@/contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 import { 
   Database, 
   FileText, 
   GitBranch, 
   Settings,
   BarChart3,
-  Users
+  Users,
+  LogOut,
+  BookOpen
 } from "lucide-react";
 
 const Index = () => {
+  const { user, signOut } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSignOut = async () => {
+    await signOut();
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8 space-y-8">
+        {/* User Header */}
+        <div className="flex justify-between items-center">
+          <div>
+            <h1 className="text-2xl font-bold">Bem-vindo, {user?.email}</h1>
+            <p className="text-muted-foreground">Sistema de Gestão de Briefings BetiHub</p>
+          </div>
+          <div className="flex gap-2">
+            <Button variant="outline" onClick={() => navigate('/briefings')}>
+              <BookOpen className="h-4 w-4 mr-2" />
+              Meus Briefings
+            </Button>
+            <Button variant="ghost" onClick={handleSignOut}>
+              <LogOut className="h-4 w-4 mr-2" />
+              Sair
+            </Button>
+          </div>
+        </div>
+
         {/* Header Section */}
         <BriefingHeader 
           currentStep={2}
